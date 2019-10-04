@@ -5,6 +5,7 @@ function submitData(userName, userEmail) {
   };
 
   let configObj = {
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json"
@@ -16,9 +17,10 @@ function submitData(userName, userEmail) {
     .then(response => response.json())
     .then(object => {
       console.log(object);
+      document.body.innerHTML = object["id"];
     })
     .catch(function(error) {
       alert("Something went wrong!");
-      console.log(error.message);
+      document.body.innerHtml = error.message;
     });
 }
