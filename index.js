@@ -21,6 +21,6 @@ function submitData(userName, userEmail) {
     })
     .catch(function(error) {
       alert("Something went wrong!");
-      document.body.innerHtml = error.message;
+      document.body.innerHTML = error.message;
     });
 }
