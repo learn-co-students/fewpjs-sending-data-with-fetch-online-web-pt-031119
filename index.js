@@ -13,7 +13,7 @@ function submitData(userName, userEmail) {
     body: JSON.stringify(data)
   };
 
-  fetch("http://localhost:3000/users", configObj)
+  return fetch("http://localhost:3000/users", configObj)
     .then(response => response.json())
     .then(object => {
       console.log(object);
